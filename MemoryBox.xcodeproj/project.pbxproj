@@ -14,6 +14,8 @@
 		935B86A51AE31F3300E46488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935B86A41AE31F3300E46488 /* Images.xcassets */; };
 		935B86A81AE31F3300E46488 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935B86A61AE31F3300E46488 /* LaunchScreen.xib */; };
 		935B86B41AE31F3300E46488 /* MemoryBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 935B86B31AE31F3300E46488 /* MemoryBoxTests.m */; };
+		93EA89A91AE3581300EBE914 /* realm-cocoa-0.91.3 in Resources */ = {isa = PBXBuildFile; fileRef = 93EA89A81AE3581300EBE914 /* realm-cocoa-0.91.3 */; };
+		93EA89AB1AE3588E00EBE914 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EA89AA1AE3588E00EBE914 /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		935B86AD1AE31F3300E46488 /* MemoryBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		935B86B21AE31F3300E46488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		935B86B31AE31F3300E46488 /* MemoryBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryBoxTests.m; sourceTree = "<group>"; };
+		93EA89A41AE357B600EBE914 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		93EA89A81AE3581300EBE914 /* realm-cocoa-0.91.3 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "realm-cocoa-0.91.3"; sourceTree = "<group>"; };
+		93EA89AA1AE3588E00EBE914 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EA89AB1AE3588E00EBE914 /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,9 @@
 				935B86961AE31F3200E46488 /* MemoryBox */,
 				935B86B01AE31F3300E46488 /* MemoryBoxTests */,
 				935B86951AE31F3200E46488 /* Products */,
+				93EA89AA1AE3588E00EBE914 /* libc++.dylib */,
+				93EA89A41AE357B600EBE914 /* UIKit.framework */,
+				93EA89A81AE3581300EBE914 /* realm-cocoa-0.91.3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +211,7 @@
 				935B86A31AE31F3300E46488 /* Main.storyboard in Resources */,
 				935B86A81AE31F3300E46488 /* LaunchScreen.xib in Resources */,
 				935B86A51AE31F3300E46488 /* Images.xcassets in Resources */,
+				93EA89A91AE3581300EBE914 /* realm-cocoa-0.91.3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +426,7 @@
 				935B86B91AE31F3300E46488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		935B86BA1AE31F3300E46488 /* Build configuration list for PBXNativeTarget "MemoryBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +435,7 @@
 				935B86BC1AE31F3300E46488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
