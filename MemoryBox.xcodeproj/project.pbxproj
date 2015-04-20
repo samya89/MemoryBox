@@ -14,8 +14,15 @@
 		935B86A51AE31F3300E46488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935B86A41AE31F3300E46488 /* Images.xcassets */; };
 		935B86A81AE31F3300E46488 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935B86A61AE31F3300E46488 /* LaunchScreen.xib */; };
 		935B86B41AE31F3300E46488 /* MemoryBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 935B86B31AE31F3300E46488 /* MemoryBoxTests.m */; };
-		93EA89A91AE3581300EBE914 /* realm-cocoa-0.91.3 in Resources */ = {isa = PBXBuildFile; fileRef = 93EA89A81AE3581300EBE914 /* realm-cocoa-0.91.3 */; };
 		93EA89AB1AE3588E00EBE914 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EA89AA1AE3588E00EBE914 /* libc++.dylib */; };
+		93EA89AF1AE35F1700EBE914 /* cameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93EA89AC1AE35F1700EBE914 /* cameraIcon.png */; };
+		93EA89B11AE35F1700EBE914 /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93EA89AE1AE35F1700EBE914 /* mapIcon.png */; };
+		93EA89B31AE35FA300EBE914 /* diaryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93EA89B21AE35FA300EBE914 /* diaryIcon.png */; };
+		93EA89B51AE35FFF00EBE914 /* drawerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93EA89B41AE35FFF00EBE914 /* drawerIcon.png */; };
+		93EA89B81AE3633B00EBE914 /* BoxCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA89B71AE3633B00EBE914 /* BoxCollectionViewController.m */; };
+		93EA89BB1AE3637500EBE914 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA89BA1AE3637500EBE914 /* Box.m */; };
+		93EA89C11AE369F300EBE914 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EA89C01AE369F300EBE914 /* Realm.framework */; };
+		93EA89C41AE36B3600EBE914 /* BoxCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA89C31AE36B3600EBE914 /* BoxCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +50,18 @@
 		935B86B21AE31F3300E46488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		935B86B31AE31F3300E46488 /* MemoryBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryBoxTests.m; sourceTree = "<group>"; };
 		93EA89A41AE357B600EBE914 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		93EA89A81AE3581300EBE914 /* realm-cocoa-0.91.3 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "realm-cocoa-0.91.3"; sourceTree = "<group>"; };
 		93EA89AA1AE3588E00EBE914 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		93EA89AC1AE35F1700EBE914 /* cameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraIcon.png; sourceTree = "<group>"; };
+		93EA89AE1AE35F1700EBE914 /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
+		93EA89B21AE35FA300EBE914 /* diaryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diaryIcon.png; sourceTree = "<group>"; };
+		93EA89B41AE35FFF00EBE914 /* drawerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawerIcon.png; sourceTree = "<group>"; };
+		93EA89B61AE3633B00EBE914 /* BoxCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxCollectionViewController.h; sourceTree = "<group>"; };
+		93EA89B71AE3633B00EBE914 /* BoxCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxCollectionViewController.m; sourceTree = "<group>"; };
+		93EA89B91AE3637500EBE914 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		93EA89BA1AE3637500EBE914 /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
+		93EA89C01AE369F300EBE914 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		93EA89C21AE36B3600EBE914 /* BoxCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxCollectionViewCell.h; sourceTree = "<group>"; };
+		93EA89C31AE36B3600EBE914 /* BoxCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EA89C11AE369F300EBE914 /* Realm.framework in Frameworks */,
 				93EA89AB1AE3588E00EBE914 /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,12 +87,12 @@
 		935B868B1AE31F3200E46488 = {
 			isa = PBXGroup;
 			children = (
+				93EA89C01AE369F300EBE914 /* Realm.framework */,
 				935B86961AE31F3200E46488 /* MemoryBox */,
 				935B86B01AE31F3300E46488 /* MemoryBoxTests */,
 				935B86951AE31F3200E46488 /* Products */,
 				93EA89AA1AE3588E00EBE914 /* libc++.dylib */,
 				93EA89A41AE357B600EBE914 /* UIKit.framework */,
-				93EA89A81AE3581300EBE914 /* realm-cocoa-0.91.3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +112,12 @@
 				935B869C1AE31F3200E46488 /* AppDelegate.m */,
 				935B869E1AE31F3200E46488 /* ViewController.h */,
 				935B869F1AE31F3200E46488 /* ViewController.m */,
+				93EA89B91AE3637500EBE914 /* Box.h */,
+				93EA89BA1AE3637500EBE914 /* Box.m */,
+				93EA89C21AE36B3600EBE914 /* BoxCollectionViewCell.h */,
+				93EA89C31AE36B3600EBE914 /* BoxCollectionViewCell.m */,
+				93EA89B61AE3633B00EBE914 /* BoxCollectionViewController.h */,
+				93EA89B71AE3633B00EBE914 /* BoxCollectionViewController.m */,
 				935B86A11AE31F3300E46488 /* Main.storyboard */,
 				935B86A41AE31F3300E46488 /* Images.xcassets */,
 				935B86A61AE31F3300E46488 /* LaunchScreen.xib */,
@@ -105,6 +129,10 @@
 		935B86971AE31F3200E46488 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				93EA89AC1AE35F1700EBE914 /* cameraIcon.png */,
+				93EA89AE1AE35F1700EBE914 /* mapIcon.png */,
+				93EA89B21AE35FA300EBE914 /* diaryIcon.png */,
+				93EA89B41AE35FFF00EBE914 /* drawerIcon.png */,
 				935B86981AE31F3200E46488 /* Info.plist */,
 				935B86991AE31F3200E46488 /* main.m */,
 			);
@@ -208,10 +236,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EA89B11AE35F1700EBE914 /* mapIcon.png in Resources */,
+				93EA89AF1AE35F1700EBE914 /* cameraIcon.png in Resources */,
 				935B86A31AE31F3300E46488 /* Main.storyboard in Resources */,
 				935B86A81AE31F3300E46488 /* LaunchScreen.xib in Resources */,
+				93EA89B31AE35FA300EBE914 /* diaryIcon.png in Resources */,
 				935B86A51AE31F3300E46488 /* Images.xcassets in Resources */,
-				93EA89A91AE3581300EBE914 /* realm-cocoa-0.91.3 in Resources */,
+				93EA89B51AE35FFF00EBE914 /* drawerIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,8 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EA89BB1AE3637500EBE914 /* Box.m in Sources */,
+				93EA89B81AE3633B00EBE914 /* BoxCollectionViewController.m in Sources */,
 				935B86A01AE31F3300E46488 /* ViewController.m in Sources */,
 				935B869D1AE31F3200E46488 /* AppDelegate.m in Sources */,
+				93EA89C41AE36B3600EBE914 /* BoxCollectionViewCell.m in Sources */,
 				935B869A1AE31F3200E46488 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +391,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MemoryBox.xcodeproj",
+					"$(PROJECT_DIR)/MemoryBox",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MemoryBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -367,6 +407,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MemoryBox.xcodeproj",
+					"$(PROJECT_DIR)/MemoryBox",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MemoryBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
