@@ -7,8 +7,13 @@
 //
 
 #import "BoxCollectionViewController.h"
+#import "BoxCollectionViewCell.h"
+#import "UIKit/UIKit.h"
+#import "Box.h"
 
 @interface BoxCollectionViewController ()
+
+@property NSArray *boxArray;
 
 @end
 
@@ -22,15 +27,21 @@ static NSString * const reuseIdentifier = @"Cell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    UIImage *myImage = [UIImage imageNamed:@"drawerIcon.png"];
+    NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
     
-    // Do any additional setup after loading the view.
-}
+    Box *box1 = [[Box alloc] init];
+    box1.boxName = @"Samya";
+    box1.imageData = data;
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    Box *box2 = [[Box alloc] init];
+    box2.boxName = @"Sam";
+    box2.imageData = data;
+    
+    self.boxArray = @[box1, box2];
+    
+//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"BoxCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"Cell"];
 }
 
 /*
@@ -43,24 +54,36 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
+- (NSArray *)RLMResultsToNSArray:(RLMResults *)results {
+    
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:results.count];
+    for (RLMObject *object in results) {
+        [array addObject:object];
+    }
+//    return [NSArray arrayWithArray:(NSArray *)results];
+    return array;
+}
+
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return 0;
+    return [self.boxArray count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    BoxCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-    // Configure the cell
-    
+    Box *box = self.boxArray[indexPath.item];
+    cell.boxNameLabel.text = [box boxName];
+    cell.boxImageView.image = [UIImage imageWithData:[box imageData]];
+    NSLog(@"%@", NSStringFromCGRect(cell.boxImageView.frame));
+    NSLog(@"%@", NSStringFromCGRect(cell.boxNameLabel.frame));
+
     return cell;
 }
 

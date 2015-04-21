@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Box;
 
 @interface BoxCollectionViewController : UICollectionViewController
+
+@property (nonatomic, strong) Box *box;
 
 @end

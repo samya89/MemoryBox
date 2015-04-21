@@ -12,7 +12,6 @@
 @interface BoxCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, weak) IBOutlet UIImageView *boxImageView;
-
 @property (weak, nonatomic) IBOutlet UILabel *boxNameLabel;
 
 @property (nonatomic, strong) Box *box;

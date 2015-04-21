@@ -10,4 +10,13 @@
 
 @implementation Box
 
+- (instancetype)initWithName:(NSString *)boxName andImage:(NSData *)imageData{
+    self = [super init];
+    if (self) {
+        _boxName = boxName;
+        _imageData = imageData;
+    }
+    return self;
+}
+
 @end

@@ -12,8 +12,9 @@
 @interface Box : RLMObject
 
 @property NSString *boxName;
-@property UIImage *boxImage;
+@property NSData *imageData;
+
+- (instancetype)initWithName:(NSString *)boxName andImage:(NSData *)imageData;
 
 @end
-RLM_ARRAY_TYPE(Box)
 

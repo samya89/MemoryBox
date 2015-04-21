@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		935B869A1AE31F3200E46488 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 935B86991AE31F3200E46488 /* main.m */; };
 		935B869D1AE31F3200E46488 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 935B869C1AE31F3200E46488 /* AppDelegate.m */; };
-		935B86A01AE31F3300E46488 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935B869F1AE31F3200E46488 /* ViewController.m */; };
 		935B86A31AE31F3300E46488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935B86A11AE31F3300E46488 /* Main.storyboard */; };
 		935B86A51AE31F3300E46488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935B86A41AE31F3300E46488 /* Images.xcassets */; };
 		935B86A81AE31F3300E46488 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935B86A61AE31F3300E46488 /* LaunchScreen.xib */; };
@@ -23,6 +22,7 @@
 		93EA89BB1AE3637500EBE914 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA89BA1AE3637500EBE914 /* Box.m */; };
 		93EA89C11AE369F300EBE914 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EA89C01AE369F300EBE914 /* Realm.framework */; };
 		93EA89C41AE36B3600EBE914 /* BoxCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA89C31AE36B3600EBE914 /* BoxCollectionViewCell.m */; };
+		93EA89C61AE6009C00EBE914 /* BoxCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93EA89C51AE6009C00EBE914 /* BoxCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,6 @@
 		935B86991AE31F3200E46488 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		935B869B1AE31F3200E46488 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		935B869C1AE31F3200E46488 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		935B869E1AE31F3200E46488 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		935B869F1AE31F3200E46488 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		935B86A21AE31F3300E46488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		935B86A41AE31F3300E46488 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		935B86A71AE31F3300E46488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -62,6 +60,7 @@
 		93EA89C01AE369F300EBE914 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		93EA89C21AE36B3600EBE914 /* BoxCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxCollectionViewCell.h; sourceTree = "<group>"; };
 		93EA89C31AE36B3600EBE914 /* BoxCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxCollectionViewCell.m; sourceTree = "<group>"; };
+		93EA89C51AE6009C00EBE914 /* BoxCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BoxCollectionViewCell.xib; path = ../BoxCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +109,6 @@
 			children = (
 				935B869B1AE31F3200E46488 /* AppDelegate.h */,
 				935B869C1AE31F3200E46488 /* AppDelegate.m */,
-				935B869E1AE31F3200E46488 /* ViewController.h */,
-				935B869F1AE31F3200E46488 /* ViewController.m */,
 				93EA89B91AE3637500EBE914 /* Box.h */,
 				93EA89BA1AE3637500EBE914 /* Box.m */,
 				93EA89C21AE36B3600EBE914 /* BoxCollectionViewCell.h */,
@@ -119,6 +116,7 @@
 				93EA89B61AE3633B00EBE914 /* BoxCollectionViewController.h */,
 				93EA89B71AE3633B00EBE914 /* BoxCollectionViewController.m */,
 				935B86A11AE31F3300E46488 /* Main.storyboard */,
+				93EA89C51AE6009C00EBE914 /* BoxCollectionViewCell.xib */,
 				935B86A41AE31F3300E46488 /* Images.xcassets */,
 				935B86A61AE31F3300E46488 /* LaunchScreen.xib */,
 				935B86971AE31F3200E46488 /* Supporting Files */,
@@ -238,6 +236,7 @@
 			files = (
 				93EA89B11AE35F1700EBE914 /* mapIcon.png in Resources */,
 				93EA89AF1AE35F1700EBE914 /* cameraIcon.png in Resources */,
+				93EA89C61AE6009C00EBE914 /* BoxCollectionViewCell.xib in Resources */,
 				935B86A31AE31F3300E46488 /* Main.storyboard in Resources */,
 				935B86A81AE31F3300E46488 /* LaunchScreen.xib in Resources */,
 				93EA89B31AE35FA300EBE914 /* diaryIcon.png in Resources */,
@@ -262,7 +261,6 @@
 			files = (
 				93EA89BB1AE3637500EBE914 /* Box.m in Sources */,
 				93EA89B81AE3633B00EBE914 /* BoxCollectionViewController.m in Sources */,
-				935B86A01AE31F3300E46488 /* ViewController.m in Sources */,
 				935B869D1AE31F3200E46488 /* AppDelegate.m in Sources */,
 				93EA89C41AE36B3600EBE914 /* BoxCollectionViewCell.m in Sources */,
 				935B869A1AE31F3200E46488 /* main.m in Sources */,
