@@ -23,6 +23,7 @@
 		93EA89C11AE369F300EBE914 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EA89C01AE369F300EBE914 /* Realm.framework */; };
 		93EA89C41AE36B3600EBE914 /* BoxCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA89C31AE36B3600EBE914 /* BoxCollectionViewCell.m */; };
 		93EA89C61AE6009C00EBE914 /* BoxCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93EA89C51AE6009C00EBE914 /* BoxCollectionViewCell.xib */; };
+		93EA89C91AE60C2700EBE914 /* AddBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA89C81AE60C2700EBE914 /* AddBoxViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		93EA89C21AE36B3600EBE914 /* BoxCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxCollectionViewCell.h; sourceTree = "<group>"; };
 		93EA89C31AE36B3600EBE914 /* BoxCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxCollectionViewCell.m; sourceTree = "<group>"; };
 		93EA89C51AE6009C00EBE914 /* BoxCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BoxCollectionViewCell.xib; path = ../BoxCollectionViewCell.xib; sourceTree = "<group>"; };
+		93EA89C71AE60C2700EBE914 /* AddBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddBoxViewController.h; path = ../AddBoxViewController.h; sourceTree = "<group>"; };
+		93EA89C81AE60C2700EBE914 /* AddBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddBoxViewController.m; path = ../AddBoxViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				93EA89C31AE36B3600EBE914 /* BoxCollectionViewCell.m */,
 				93EA89B61AE3633B00EBE914 /* BoxCollectionViewController.h */,
 				93EA89B71AE3633B00EBE914 /* BoxCollectionViewController.m */,
+				93EA89C71AE60C2700EBE914 /* AddBoxViewController.h */,
+				93EA89C81AE60C2700EBE914 /* AddBoxViewController.m */,
 				935B86A11AE31F3300E46488 /* Main.storyboard */,
 				93EA89C51AE6009C00EBE914 /* BoxCollectionViewCell.xib */,
 				935B86A41AE31F3300E46488 /* Images.xcassets */,
@@ -259,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EA89C91AE60C2700EBE914 /* AddBoxViewController.m in Sources */,
 				93EA89BB1AE3637500EBE914 /* Box.m in Sources */,
 				93EA89B81AE3633B00EBE914 /* BoxCollectionViewController.m in Sources */,
 				935B869D1AE31F3200E46488 /* AppDelegate.m in Sources */,

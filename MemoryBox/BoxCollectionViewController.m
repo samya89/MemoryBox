@@ -7,13 +7,15 @@
 //
 
 #import "BoxCollectionViewController.h"
+#import "AddBoxViewController.h"
 #import "BoxCollectionViewCell.h"
 #import "UIKit/UIKit.h"
 #import "Box.h"
 
 @interface BoxCollectionViewController ()
 
-@property NSArray *boxArray;
+@property (nonatomic, strong) RLMResults *array;
+@property (nonatomic, strong) RLMNotificationToken *notification;
 
 @end
 
@@ -24,35 +26,54 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
+    self.array = [Box allObjects];
+    
+    // Set realm notification block
+    __weak typeof(self) weakSelf = self;
+    self.notification = [RLMRealm.defaultRealm addNotificationBlock:^(NSString *note, RLMRealm *realm) {
+        [weakSelf.collectionView reloadData];
+    }];
+    [self.collectionView reloadData];
+
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    UIImage *myImage = [UIImage imageNamed:@"drawerIcon.png"];
-    NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
-    
-    Box *box1 = [[Box alloc] init];
-    box1.boxName = @"Samya";
-    box1.imageData = data;
-
-    Box *box2 = [[Box alloc] init];
-    box2.boxName = @"Sam";
-    box2.imageData = data;
-    
-    self.boxArray = @[box1, box2];
+//    UIImage *myImage = [UIImage imageNamed:@"drawerIcon.png"];
+//    NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
+//    
+//    Box *box1 = [[Box alloc] init];
+//    box1.boxName = @"Samya";
+//    box1.imageData = data;
+//
+//    Box *box2 = [[Box alloc] init];
+//    box2.boxName = @"Sam";
+//    box2.imageData = data;
+//    
+//    self.boxArray = @[box1, box2];
     
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     [self.collectionView registerNib:[UINib nibWithNibName:@"BoxCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"Cell"];
 }
 
-/*
+//#pragma mark - AddObjectVCDelegate
+//
+//- (void)addTask:(Todo *)task{
+//    [self.todoItems addObject:task];
+//    [self.tableView reloadData];
+//}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        Todo *object = self.todoItems[indexPath.row];
+    
+//        [[segue destinationViewController] setDetailItem:object];
+     if ([[segue identifier] isEqualToString:@"addBox"]) {
+        AddBoxViewController *addBoxVC = [segue destinationViewController];
+//        addBoxVC.delegate = self;
+     }
 }
-*/
 
 - (NSArray *)RLMResultsToNSArray:(RLMResults *)results {
     
@@ -72,19 +93,39 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.boxArray count];
+    return [self.array count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BoxCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-    Box *box = self.boxArray[indexPath.item];
+    Box *box = self.array[indexPath.item];
     cell.boxNameLabel.text = [box boxName];
     cell.boxImageView.image = [UIImage imageWithData:[box imageData]];
     NSLog(@"%@", NSStringFromCGRect(cell.boxImageView.frame));
     NSLog(@"%@", NSStringFromCGRect(cell.boxNameLabel.frame));
 
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+   // [self performSegueWithIdentifier:<#(NSString *)#> sender:<#(id)#>]
+}
+
+- (void)add
+{
+    RLMRealm *realm = RLMRealm.defaultRealm;
+    [realm beginWriteTransaction];
+    //    UIImage *myImage = [UIImage imageNamed:@"drawerIcon.png"];
+    //    NSData *data = [NSData dataWithData:UIImagePNGRepresentation(myImage)];
+    //
+    //    Box *box1 = [[Box alloc] init];
+    //    box1.boxName = @"Samya";
+    //    box1.imageData = data;
+
+    [Box createInRealm:realm withObject:@[[self randomString], [self randomDate]]];
+    [realm commitWriteTransaction];
 }
 
 #pragma mark <UICollectionViewDelegate>
